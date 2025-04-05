@@ -1,8 +1,10 @@
 package com.example.springproxy.app.v2;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 public class OrderControllerV2 {
 
@@ -14,6 +16,7 @@ public class OrderControllerV2 {
 
     @GetMapping("/v2/request")
     public String request(String itemId) {
+        log.info("request v2 : {}", itemId);
         orderService.orderItem(itemId);
         return "ok";
     }
