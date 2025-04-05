@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 
 @Import({AppV1Config.class})
 //@SpringBootApplication(scanBasePackages = "com.example.springproxy.app.v1")
-@SpringBootApplication(scanBasePackages = "com.example.springproxy.app.v2") // 컴포넌트 스캔할 대상 패키지
+@SpringBootApplication(scanBasePackages = {"com.example.springproxy.app.v2", "com.example.springproxy.app.v3"}) // 컴포넌트 스캔할 대상 패키지
 public class SpringProxyApplication {
 
     public static void main(String[] args) {
