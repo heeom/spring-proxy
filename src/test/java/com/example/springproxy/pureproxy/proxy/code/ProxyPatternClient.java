@@ -1,4 +1,4 @@
-package com.example.springproxy.proxy.code;
+package com.example.springproxy.pureproxy.proxy.code;
 
 
 public class ProxyPatternClient {

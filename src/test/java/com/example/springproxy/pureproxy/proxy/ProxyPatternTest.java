@@ -1,5 +1,8 @@
-package com.example.springproxy.proxy.code;
+package com.example.springproxy.pureproxy.proxy;
 
+import com.example.springproxy.pureproxy.proxy.code.CacheProxy;
+import com.example.springproxy.pureproxy.proxy.code.ProxyPatternClient;
+import com.example.springproxy.pureproxy.proxy.code.RealSubject;
 import org.junit.jupiter.api.Test;
 
 public class ProxyPatternTest {
