@@ -1,5 +1,6 @@
 package com.example.springproxy.app.v1_proxy;
 
+import com.example.springproxy.app.common.LogTrace;
 import com.example.springproxy.app.v1.OrderControllerV1;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,11 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 public class OrderControllerProxy implements OrderControllerV1 {
 
     private final OrderControllerV1 target;
+    private final LogTrace logTrace;
 
     @Override
     public String request(String itemId) {
         log.info("====== OrderControllerProxy START =====");
         log.info("====== OrderControllerProxy : call orderControllerV1.request() =====");
+        logTrace.log();
         String result = target.request(itemId);
         log.info("====== OrderControllerProxy target result : {}", result);
         log.info("====== OrderControllerProxy END =====");
