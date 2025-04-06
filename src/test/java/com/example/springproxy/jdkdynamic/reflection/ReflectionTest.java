@@ -1,4 +1,4 @@
-package com.example.springproxy.reflection;
+package com.example.springproxy.jdkdynamic.reflection;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
